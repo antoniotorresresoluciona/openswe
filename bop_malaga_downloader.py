@@ -62,6 +62,10 @@ class BOPMalagaDownloader:
             'user_agent': 'BOP-Malaga-Downloader/1.0 (Educational/Research Purpose)',
             'max_storage_mb': 1000,  # 1GB default
             'cleanup_days': 30,
+            'compression_days': 7,  # Compress files older than 7 days
+            'compress_old_files': True,  # Enable compression
+            'auto_cleanup': True,  # Enable automatic cleanup
+            'storage_cleanup_threshold': 0.9,  # Cleanup when 90% of max storage is used
             'log_level': 'INFO'
         }
         
@@ -492,4 +496,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
