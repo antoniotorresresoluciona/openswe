@@ -35,6 +35,12 @@ except ImportError:
     print("Error: BeautifulSoup4 is required. Install with: pip install beautifulsoup4")
     sys.exit(1)
 
+try:
+    from tracker import DocumentTracker
+except ImportError:
+    print("Error: tracker module is required. Ensure tracker.py is in the same directory.")
+    sys.exit(1)
+
 
 class BOPMalagaDownloader:
     """Main class for downloading BOP Málaga PDF documents."""
@@ -486,3 +492,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
